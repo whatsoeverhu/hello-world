@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "电子衣柜",
+    "slug": "digital-wardrobe",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "wardrobe",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#faf8f5"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "需要访问相册以添加衣物图片",
+        "NSCameraUsageDescription": "需要访问相机以拍摄衣物照片"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#faf8f5"
+      },
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "需要访问相册以添加衣物图片",
+          "cameraPermission": "需要访问相机以拍摄衣物照片"
+        }
+      ]
+    ]
+  }
+}
